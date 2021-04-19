@@ -17,18 +17,16 @@ body {
 }
 
 header {
-    /* position: relative; */
     padding: 1.25em;
     width: 100%;
     background-color: #0049FF;
-    /* top: 0; */
-    /* left: 0; */
-    /* z-index: 1000; */
     padding-left: 20px;
 }
 
 .header-wrap {
     padding: 0 3em;
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 .btn-light {
@@ -49,15 +47,10 @@ header {
     display: block;
 }
 
-.footer-container {
-    margin: auto;
-    align-items: center;
-}
-
 h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin: 0;
+    font-size: 3em !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
 }
 
 h2 {
@@ -67,6 +60,24 @@ h2 {
 
 .d-lg-block { 
     text-align: right;
+}
+
+.nav-list {
+    display: inline-block;
+    position: sticky;
+}
+.nav-css {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: white;
 }
 
 nav ul {
@@ -97,11 +108,12 @@ nav ul li {
     list-style: none;
     display: inline-block;
     padding: 1.25em 1.25em 0 1.25em ;
+
 }
 
 nav ul li a:hover {
     color: #ffc157;
-    text-decoration: underline #ffc157;
+    text-decoration: none;
 }
 
 .body-1 {
@@ -132,28 +144,29 @@ main {
     margin-bottom: 20px;
 }
 
+.dropdown-menu {
+    justify-content: center;
+    right: 0 !important;
+}
+
 .carousel-item {
     filter: brightness(70%);
 } 
 
 .promo-container {
-    max-width: 100%;
-    margin: auto;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     align-content: center;
     text-align: center;
 }
 
-/* .promo-title {
-    transform: translateY(-1700%);
-    color: white;
-} */
-
 .cta-carousel {
     text-align: center;
-    transform: translateY(-250%);
+    transform: translateY(-350%);
 }
 
-/*.searchbar-container {
+.searchbar-container {
     display: inline-block;
     justify-content: right;
 }
@@ -166,19 +179,17 @@ main {
 .search-btn, .search-btn .btn {
     display: inline-block;
     color: white;
-}*/
+}
 /* CITY REVEAL */
-/* #city-container {
-
+#city-container {
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#select-city {
-
+.dropdown-menu {
+    text-align: center !important;
 }
-
-#city-content {
-
-} */
 
 .grid-container {
     display: grid;
@@ -208,16 +219,95 @@ main {
     transform: translateY(-900%);
 }
 
-
  .grid-item .categories {
     opacity: 0;
 }
+
+/* STORES */
+.store-grid {
+    display: grid;
+    grid-template-columns: .75fr 2fr;
+    grid-auto-rows: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    /* column-gap: 15px; */
+    gap: 15px;
+}
+
+.store-item {
+    display: flex;
+    background-color: #ffc157;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.store-desc {
+    color: #0f0f0f;
+}
 /* ----- SHOW TEXT TRANSITION ----- */
-/*
+
 .grid-item .categories:hover {
     opacity: 100;
-} */
+    color: #0049FF;
+    text-decoration: none;
+}
 
+/* FOOTER */
+.footer-container {
+    margin-bottom: 1em;
+    padding-top: 1.5em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-top: .5px solid rgba(155, 155, 155, 0.5) ;
+}
+
+.footer-container a {
+    padding: 15px;
+    display: inline-block;
+}
+/* /FOOTER */
+
+/* RESPONSIVE */
 @media screen and (max-width: 991px) {
+    .header-wrap {
+        justify-content: center;
+        align-items: center;
+    }
 
+    h1 {
+        font-size: 2em !important;
+        font-weight: 700 !important;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 661px) {
+    .grid-container {
+        display: block;
+    }
+
+    .grid-item-img {
+        max-width: 75%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1095px) {
+    .store-grid {
+        display: block;
+        grid-auto-rows: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+    .store-item {
+        width: 100%;
+        height: auto;
+    }
+    .btn {
+        margin-bottom: 2em !important;
+    }
 }

@@ -6,6 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 		<link rel=stylesheet href="css/styles.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script src="script.js"></script>
 		<title>Stockist – Your Local Store</title>
@@ -13,50 +16,38 @@
 
 	<body>
 		<!-- HEADER -->
-		<header class="reveal1">
-			<div class="header-wrap">
-				<div class="display">
-					Stockist
-				</div>
-				<nav role="navigation" aria-label="main-menu" class="navbar fixed-top justify-content-end d-none d-lg-block">
-					<ul class="body-2">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Stores</a></li>
-						<li><a href="#">Sign-In</a></li>
-						<li><a href="#">Cart</a></li>
-					</ul>
-				</nav>
+		<header class="reveal1 header-wrap">
+			<a href="index.html" class="display logo">Stockist</a>
+			<nav role="navigation" aria-label="main-menu" class="navbar nav-css fixed-top justify-content-end d-none d-lg-block">
+				<ul class="body-2 nav-list">
+					<li><a href="about.html">About</a></li>
+					<li><a href="stores.html">Stores</a></li>
+					<li><a href="#" class="dropdown-toggle">Sign-In</a></li>
+					<li><a href="#">Cart</a></li>
+				</ul>
 				<!-- SEARCH -->
-				<!-- <div class="searchbar-container"> 
-					<div class="searchbar">
-					<input type="search" class="form-control" placeholder="Search your community">
-					</div>
-					<div class="search-btn">
-						<button class="btn">[icon]</button> 
-					</div>
-				</div>-->
+				<form class="form-inline mt-3">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+				  </form>
 				<!-- /SEARCH -->
-			</div>
 		</header>
 
 		<main>
 			<!-- CITY H1 -->
-			<div class="reveal2 city"> <h1>TORONTO</h1></div>	
-			<div class="centre mt-0 pt-0" id="city-container">
-			<!--  -->
-				<a href="#" id="select-city" class="caption">Change Your City</a>
-				<!-- <div id="city-content">
-					<ol>
-						<li>Toronto</li>
-						<li>Vancouver</li>
-						<li>Montreal</li>
-						<li>Calgary</li>
-						<li>Edmonton</li>
-					</ol>
-				</div> -->
+			<div class="reveal2 city"><h1>TORONTO</h1></div>	
+			<div class="dropdown centre mt-0 pt-0 reveal2" id="city-container">
+				<a href="#" class="btn btn-sm caption dropdown-toggle mb-3" data-toggle="dropdown">Change Your City</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Toronto</a></li>
+						<li><a role="menuitem" tabindex="-1" href="#">Vancouver</a></li>
+						<li><a role="menuitem" tabindex="-1" href="#">Montreal</a></li>
+						<li><a role="menuitem" tabindex="-1" href="#">Calgary</a></li>
+						<li><a role="menuitem" tabindex="-1" href="#">Edmonton</a></li>
+					</ul>
 			</div>
 			<!-- CAROUSEL -->
-			<div class="promo-container">
+			<div class="promo-container reveal3">
 
 				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-indicators">
@@ -90,30 +81,34 @@
 						View Store
 					</a>
 				</div>
-				<!-- <div class="promo-title h1">
-					Will's Boutique
-				</div> -->
+			<!-- /CAROUSEL -->
 			</div>
 			<!-- CATEGORIES -->
 			<div class="grid-container">
-				<div class="grid-item">
-					<img class="grid-item-img" src="images/categories-01.png" alt="three houses">
-					<div class="h2 categories">Stores</div>
-				</div>
-				<div class="grid-item">
-					<img class="grid-item-img" src="images/categories-02.png" alt="three brown paper bags">
-					<div class="h2 categories">Grocers & Specialty Food</div>
-				</div>
-				<div class="grid-item">
+				<a href="#">
+					<div class="grid-item">
+						<img class="grid-item-img" src="images/categories-01.png" alt="three houses">
+						<div class="h2 categories">General</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="grid-item">
+						<img class="grid-item-img" src="images/categories-02.png" alt="three brown paper bags">
+						<div class="h2 categories">Grocers & Specialty Food</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="grid-item">
 					<img class="grid-item-img" src="images/categories-03.png" alt="three playfully drawn hand outlines">
 					<div class="h2 categories">Artisan</div> 
-				</div>
+					</div>
+				</a>
 			</div>
 			<!-- /CATEGORIES -->
 
 		</main>
 		<!-- FOOTER -->
-		<div class="footer-container caption mb-3">
+		<div class="footer-container caption">
 			<a class="centre" href="#">Terms & Conditions</a>
 			<a class="centre" href="#">Privacy Policy</a>
 		</div>
